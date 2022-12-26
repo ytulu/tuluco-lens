@@ -4,8 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { LensProvider } from '@lens-protocol/react-native-lens-ui-kit';
 
 import Profiles from './Profiles'
-import ViewProfile from './ProfileView'
-
+import ViewProfile from './ViewProfile'
+import ViewComments from './ViewComments'
+import ViewFollowing from './ViewFollowing'
 
 const Stack = createNativeStackNavigator()
 
@@ -16,6 +17,8 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Profiles}  />
           <Stack.Screen name="ViewProfile" component={ViewProfile} />
+          <Stack.Screen name="ViewComments" component={ViewComments} />
+          <Stack.Screen name="ViewFollowing" component={ViewFollowing} />
         </Stack.Navigator>
       </NavigationContainer>
     </LensProvider>
@@ -25,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
